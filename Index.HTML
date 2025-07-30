@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>धार्मिक ग्रंथ संग्रह</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        header { background: #4a2c2a; color: white; text-align: center; padding: 20px; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header p { font-size: 1.2em; margin-top: 5px; }
+        #search { width: 80%; max-width: 500px; padding: 10px; margin: 15px auto; display: block; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; }
+        section { margin: 20px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #4a2c2a; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 5px 0; font-size: 1.1em; }
+        a { text-decoration: none; color: #2a5db0; }
+        a:hover { text-decoration: underline; }
+        footer { background: #4a2c2a; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+    </style>
+    <script>
+        function searchBooks() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let items = document.querySelectorAll('ul li');
+            items.forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>धार्मिक ग्रंथ संग्रह</h1>
+        <p>प्राचीन वेद, पुराण, उपनिषद और ग्रंथों का डिजिटल आर्काइव</p>
+        <input type="text" id="search" onkeyup="searchBooks()" placeholder="ग्रंथ खोजें...">
+    </header>
+
+    <!-- पुराण -->
+    <section>
+        <h2>पुराण</h2>
+        <ul>
+            <li><a href="https://archive.org/details/shrimad-bhagawat-mahapuran-vol-1-gita-press-gorakhpur/page/n9/mode/1up" target="_blank">श्रीमद भागवत महापुराण (भाग 1)</a></li>
+            <li><a href="https://archive.org/details/devi-bhagavata-with-hindi-translation-volume-1-gita-press_202310/mode/1up" target="_blank">देवी भागवत पुराण (भाग 1)</a></li>
+            <li><a href="https://archive.org/details/vishnu-puran-illustrated-with-hindi-translations-gita-press-gorakhpur/mode/1up" target="_blank">विष्णु पुराण</a></li>
+            <li><a href="https://archive.org/details/matsya-puran-gita-press-gorakhpur" target="_blank">मत्स्य पुराण</a></li>
+            <li><a href="https://archive.org/details/padma-puran-gita-press-gorakhpur" target="_blank">पद्म पुराण</a></li>
+        </ul>
+    </section>
+
+    <!-- वेद -->
+    <section>
+        <h2>वेद</h2>
+        <ul>
+            <li><a href="https://archive.org/details/RigvedaSamhitaPartIIIAryaSahityaMandirAjmer1931_201711/Rigveda%20Samhita%20Part%20I%20-%20Arya%20Sahitya%20Mandir%20Ajmer%201931/page/603/mode/1up" target="_blank">ऋग्वेद</a></li>
+            <li><a href="#" target="_blank">यजुर्वेद</a></li>
+            <li><a href="#" target="_blank">सामवेद</a></li>
+            <li><a href="#" target="_blank">अथर्ववेद</a></li>
+        </ul>
+    </section>
+
+    <!-- उपनिषद -->
+    <section>
+        <h2>उपनिषद</h2>
+        <ul>
+            <li><a href="https://archive.org/details/in.ernet.dli.2015.343174/page/n10/mode/1up" target="_blank">मुण्डक उपनिषद</a></li>
+            <li><a href="https://archive.org/details/wg680/page/%E0%A5%A8%E0%A5%A9%E0%A5%AB/mode/1up" target="_blank">108 उपनिषद</a></li>
+        </ul>
+    </section>
+
+    <!-- गीता / महाभारत / रामायण -->
+    <section>
+        <h2>रामायण / महाभारत / गीता</h2>
+        <ul>
+            <li><a href="#" target="_blank">वाल्मीकि रामायण</a></li>
+            <li><a href="#" target="_blank">महाभारत</a></li>
+            <li><a href="#" target="_blank">श्रीमद भगवद गीता</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 धार्मिक ग्रंथ संग्रह | संपर्क: 
+        <a href="https://facebook.com" style="color: #fff;">Facebook</a> | 
+        <a href="https://youtube.com" style="color: #fff;">YouTube</a></p>
+    </footer>
+</body>
+</html>
